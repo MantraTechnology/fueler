@@ -14,6 +14,9 @@
         "convict": "~0.4.2"
     },
     "devDependencies": {
-        "mocha": "~1.17.1"
+        "mocha": "~1.17.1",
+        "grunt": "~0.4.2",
+        "grunt-simple-mocha": "~0.4.0"
     }
+  }
 }
