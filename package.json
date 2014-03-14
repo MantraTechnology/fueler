@@ -1,18 +1,22 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "express": "3.4.4",
-    "jade": "*",
-    "mocha": "~1.17.1"
-  },
-  "devDependencies": {
-    "mocha": "~1.17.1",
-    "grunt": "~0.4.2",
-    "grunt-simple-mocha": "~0.4.0"
+    "name": "application-name",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "3.4.4",
+        "jade": "*",
+        "mocha": "~1.17.1",
+        "passport": "~0.2.0",
+        "passport-github": "~0.1.5",
+        "convict": "~0.4.2"
+    },
+    "devDependencies": {
+        "mocha": "~1.17.1",
+        "grunt": "~0.4.2",
+        "grunt-simple-mocha": "~0.4.0"
+    }
   }
 }
