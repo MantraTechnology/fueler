@@ -4,10 +4,5 @@
  */
 
 {
-    "port": {
-        "doc": "The port to bind.",
-        "format": "port",
-        "default": 1337,
-        "env": "PORT"
-    }
+    "port": 1337
 }
