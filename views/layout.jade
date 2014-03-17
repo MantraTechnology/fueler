@@ -1,7 +1,22 @@
 doctype html
-html
+html(ng-app="app")
     head
         title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
-    body
-        block content
+        link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css')
+        link(rel='stylesheet', href='/stylesheets/app.css')
+
+        script(src='/socket.io/socket.io.js')
+        script(src='http://code.jquery.com/jquery-1.8.3.js')
+        script(src='http://code.jquery.com/ui/1.9.2/jquery-ui.js')
+        script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js')
+        script(src='/js/collab-board.js')
+
+    body(ng-controller="MainCtrl")
+        div.navbar.navbar-inverse
+            div.navbar-inner
+                a(class="brand", href="#") Workspace
+                button(id="createButton", ng-click="createNote()", class="btn btn-info pull-right") Create Note
+        div(sticky-note, ng-repeat="note in notes", note="note", class="alert alert-block sticky-note", ondelete="deleteNote(id)")
+            button(class="close", ng-click="deleteNote(note.id)") &times;
+            input(ng-model="note.title", ng-change="updateNote(note)", type="text", class="title")
+            textarea(ng-model="note.body", ng-change="updateNote(note)", class="body") {{note.body}}
