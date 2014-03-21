@@ -1,1 +1,8 @@
-{}
+/**
+ * Created by adron on 3/14/14.
+ * Description: Adding configuration for the project.
+ */
+
+{
+    "port": 1337
+}
